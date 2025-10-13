@@ -106,12 +106,22 @@
       mix-blend-mode: screen;
       pointer-events: none;
     }
+    /* Light theme overrides for readability on white backgrounds */
+    .text-ivory { color: #334155 !important; }
+    .text-ivory\/90 { color: rgba(51,65,85,0.90) !important; }
+    .text-ivory\/85 { color: rgba(51,65,85,0.85) !important; }
+    .text-ivory\/80 { color: rgba(51,65,85,0.80) !important; }
+    .text-ivory\/75 { color: rgba(51,65,85,0.75) !important; }
+    .text-ivory\/70 { color: rgba(51,65,85,0.70) !important; }
+
+    .border-white\/10 { border-color: rgba(148,163,184,0.35) !important; }
+    .bg-ivory\/10 { background-color: rgba(241,245,249,1) !important; }
+    .bg-ivory\/5 { background-color: rgba(248,250,252,1) !important; }
+    /* Ensure any residual dark cards render white */
+    .bg-deepPurple\/30 { background-color: #ffffff !important; }
   </style>
 </head>
-<body class="min-h-screen bg-deepPurple bg-cosmic-gradient text-ivory font-body antialiased">
-  <!-- Star Parallax -->
-  <div aria-hidden="true" class="star-layer stars-1 fixed inset-0 -z-10" id="stars1"></div>
-  <div aria-hidden="true" class="star-layer stars-2 fixed inset-0 -z-10" id="stars2"></div>
+<body class="min-h-screen bg-white text-slate-800 font-body antialiased">
 
   <!-- Header / Navbar -->
   <header class="sticky top-0 z-50 transition-all duration-300" id="siteHeader">
@@ -128,12 +138,12 @@
           </span>
           <div class="leading-tight">
             <div class="font-heading text-xl font-semibold tracking-wide">AstroPath</div>
-            <div class="text-xs text-ivory/70">Vedic Astrology</div>
+            <div class="text-xs text-slate-500">Vedic Astrology</div>
           </div>
         </a>
 
         <!-- Nav Links (Desktop) -->
-        <nav class="hidden md:flex items-center gap-8 text-ivory/90">
+        <nav class="hidden md:flex items-center gap-8 text-slate-700">
           <a href="#home" class="hover:text-gold transition">Home</a>
           <a href="#about" class="hover:text-gold transition">About</a>
           <a href="#services" class="hover:text-gold transition">Consultations</a>
@@ -152,7 +162,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-deepPurple/90 backdrop-blur">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 space-y-3">
         <a href="#home" class="block py-2 hover:text-gold">Home</a>
         <a href="#about" class="block py-2 hover:text-gold">About</a>
@@ -247,7 +257,7 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="relative py-16 sm:py-20 bg-ivory/5">
+  <section id="services" class="relative py-16 sm:py-20 bg-slate-50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10" data-aos="fade-up">
         <h2 class="font-heading text-3xl sm:text-4xl">Consultation Services</h2>
@@ -257,8 +267,8 @@
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Service Card -->
-        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up">
-          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-gold/40 transition-transform transform hover:-translate-y-0.5" data-aos="fade-up">
+          <div class="h-12 w-12 rounded-xl bg-slate-100 grid place-items-center border border-slate-200">
             <i class="fa-solid fa-briefcase text-gold"></i>
           </div>
           <h3 class="mt-4 font-semibold text-xl">Career & Finance Guidance</h3>
@@ -266,8 +276,8 @@
           <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
         </div>
 
-        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-gold/40 transition-transform transform hover:-translate-y-0.5" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-12 w-12 rounded-xl bg-slate-100 grid place-items-center border border-slate-200">
             <i class="fa-solid fa-heart text-gold"></i>
           </div>
           <h3 class="mt-4 font-semibold text-xl">Love & Relationship</h3>
@@ -275,8 +285,8 @@
           <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
         </div>
 
-        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="200">
-          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-gold/40 transition-transform transform hover:-translate-y-0.5" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-12 w-12 rounded-xl bg-slate-100 grid place-items-center border border-slate-200">
             <i class="fa-solid fa-notes-medical text-gold"></i>
           </div>
           <h3 class="mt-4 font-semibold text-xl">Health & Well-being</h3>
@@ -284,8 +294,8 @@
           <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
         </div>
 
-        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up">
-          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-gold/40 transition-transform transform hover:-translate-y-0.5" data-aos="fade-up">
+          <div class="h-12 w-12 rounded-xl bg-slate-100 grid place-items-center border border-slate-200">
             <i class="fa-solid fa-ring text-gold"></i>
           </div>
           <h3 class="mt-4 font-semibold text-xl">Marriage Compatibility</h3>
@@ -293,8 +303,8 @@
           <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
         </div>
 
-        <div id="horoscope" class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+        <div id="horoscope" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-gold/40 transition-transform transform hover:-translate-y-0.5" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-12 w-12 rounded-xl bg-slate-100 grid place-items-center border border-slate-200">
             <i class="fa-solid fa-sun text-gold"></i>
           </div>
           <h3 class="mt-4 font-semibold text-xl">Daily Horoscope</h3>
@@ -302,8 +312,8 @@
           <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
         </div>
 
-        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="200">
-          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-gold/40 transition-transform transform hover:-translate-y-0.5" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-12 w-12 rounded-xl bg-slate-100 grid place-items-center border border-slate-200">
             <i class="fa-solid fa-hand-hamsa text-gold"></i>
           </div>
           <h3 class="mt-4 font-semibold text-xl">Remedial Sessions</h3>
@@ -324,17 +334,17 @@
       </div>
       <div class="w-full flex justify-center py-8" data-aos="fade-up" data-aos-delay="100">
         <div class="w-full max-w-5xl">
-          <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-ivory/5">
+          <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
             <iframe src="https://calendly.com/your-username" class="h-full w-full" frameborder="0" title="Calendly Booking"></iframe>
           </div>
         </div>
       </div>
-      <p class="text-center text-gold/90" data-aos="fade-up" data-aos-delay="200">Thank you! Your booking is confirmed.</p>
+      <!-- Booking confirmation will be shown by your scheduler after a successful booking -->
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="relative py-16 sm:py-20 bg-ivory/5">
+  <section id="testimonials" class="relative py-16 sm:py-20 bg-slate-50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10" data-aos="fade-up">
         <h2 class="font-heading text-3xl sm:text-4xl">What Clients Say</h2>
@@ -343,7 +353,7 @@
 
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Testimonial Card -->
-        <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6" data-aos="fade-up">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6" data-aos="fade-up">
           <div class="flex items-center gap-4">
             <img src="https://randomuser.me/api/portraits/women/68.jpg" class="h-12 w-12 rounded-full object-cover" alt="Client" />
             <div>
@@ -355,7 +365,7 @@
           <p class="mt-3 text-ivory/85">Accurate and compassionate guidance. Helped me make a confident career switch!</p>
         </div>
 
-        <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6" data-aos="fade-up" data-aos-delay="100">
           <div class="flex items-center gap-4">
             <img src="https://randomuser.me/api/portraits/men/22.jpg" class="h-12 w-12 rounded-full object-cover" alt="Client" />
             <div>
@@ -367,7 +377,7 @@
           <p class="mt-3 text-ivory/85">The remedies were simple yet effective. I feel aligned and focused.</p>
         </div>
 
-        <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6" data-aos="fade-up" data-aos-delay="200">
           <div class="flex items-center gap-4">
             <img src="https://randomuser.me/api/portraits/women/12.jpg" class="h-12 w-12 rounded-full object-cover" alt="Client" />
             <div>
@@ -391,17 +401,19 @@
       </div>
 
       <div class="grid lg:grid-cols-2 gap-10 items-start">
-        <div data-aos="fade-up" class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6">
-          <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-4">
-            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-ivory/10 border border-white/10 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
-            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-ivory/10 border border-white/10 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
-            <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-ivory/10 border border-white/10 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60"></textarea>
-            <button type="submit" class="bg-gradient-to-r from-saffron to-gold text-deepPurple py-3 px-6 rounded-full font-semibold shadow-glow-gold hover:opacity-95">Send Message</button>
+        <div data-aos="fade-up" class="rounded-2xl border border-slate-200 bg-white p-6">
+          <form id="contactForm" action="https://formspree.io/f/your_form_id" method="POST" class="space-y-4">
+            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
+            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
+            <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60"></textarea>
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+            <button type="submit" class="bg-gradient-to-r from-saffron to-gold text-deepPurple py-3 px-6 rounded-full font-semibold shadow-glow-gold hover:opacity-95 transition-transform active:scale-95">Send Message</button>
+            <div id="formStatus" class="hidden text-sm"></div>
           </form>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="100" class="space-y-4">
-          <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
             <h3 class="font-semibold text-xl">Connect</h3>
             <p class="mt-2 text-ivory/80">Follow for insights, mantras, and daily tips.</p>
             <div class="mt-4 flex items-center gap-4">
@@ -425,7 +437,7 @@
   </a>
 
   <!-- Footer -->
-  <footer class="relative bg-deepPurple/80 border-t border-white/10 mt-10">
+  <footer class="relative bg-white border-t border-slate-200 mt-10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
@@ -454,7 +466,7 @@
           <p class="text-ivory/75">Astrology provides insights; outcomes are not guaranteed. For medical, legal, or financial decisions, consult a qualified professional.</p>
         </div>
       </div>
-      <div class="mt-8 border-t border-white/10 pt-6 text-sm text-ivory/70">© 2025 AstroPath. For spiritual guidance purposes only.</div>
+      <div class="mt-8 border-t border-slate-200 pt-6 text-sm text-ivory/70">© 2025 AstroPath. For spiritual guidance purposes only.</div>
     </div>
   </footer>
 
@@ -484,28 +496,55 @@
       });
     });
 
-    // Header shadow on scroll
+    // Header styling on scroll (light theme)
     const siteHeader = document.getElementById('siteHeader');
     const onScrollHeader = () => {
       if (window.scrollY > 4) {
-        siteHeader.classList.add('backdrop-blur', 'bg-deepPurple/70', 'shadow');
+        siteHeader.classList.add('backdrop-blur', 'bg-white/90', 'shadow', 'border-b', 'border-slate-200');
       } else {
-        siteHeader.classList.remove('backdrop-blur', 'bg-deepPurple/70', 'shadow');
+        siteHeader.classList.remove('backdrop-blur', 'bg-white/90', 'shadow', 'border-b', 'border-slate-200');
       }
     };
     window.addEventListener('scroll', onScrollHeader, { passive: true });
     onScrollHeader();
 
-    // Parallax stars
-    const stars1 = document.getElementById('stars1');
-    const stars2 = document.getElementById('stars2');
-    const onScrollParallax = () => {
-      const y = window.scrollY || window.pageYOffset;
-      if (stars1) stars1.style.transform = `translateY(${y * -0.08}px)`;
-      if (stars2) stars2.style.transform = `translateY(${y * -0.16}px)`;
-    };
-    window.addEventListener('scroll', onScrollParallax, { passive: true });
-    onScrollParallax();
+    // Contact form (Formspree) AJAX submit
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (formStatus) {
+          formStatus.textContent = 'Sending...';
+          formStatus.classList.remove('hidden', 'text-red-600', 'text-green-600');
+          formStatus.classList.add('text-slate-600');
+        }
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(contactForm)
+          });
+          const data = await response.json().catch(() => ({}));
+          if (response.ok) {
+            contactForm.reset();
+            if (formStatus) {
+              formStatus.textContent = 'Thanks! Your message has been sent.';
+              formStatus.classList.remove('text-slate-600');
+              formStatus.classList.add('text-green-600');
+            }
+          } else {
+            throw new Error((data && data.errors && data.errors.map(e => e.message).join(', ')) || 'Submission failed.');
+          }
+        } catch (err) {
+          if (formStatus) {
+            formStatus.textContent = 'There was a problem submitting the form. Please try again.';
+            formStatus.classList.remove('text-slate-600');
+            formStatus.classList.add('text-red-600');
+          }
+        }
+      });
+    }
   </script>
 </body>
 </html>
