@@ -1,504 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroPath — Vedic Astrology Consultations</title>
+  <meta name="description" content="Book personalized Vedic astrology consultations. Career, relationships, health, and life guidance by trusted experts." />
+  <meta name="keywords" content="Astrology, Vedic Astrology, Horoscope, Kundli, Numerology, Palmistry, Indian Astrology Consultation" />
+  <link rel="canonical" href="https://example.com/" />
 
-    <title>AstroPath — Vedic Astrology Consultations</title>
-    <meta name="description" content="Discover your destiny with personalized Vedic astrology consultations. Career, love, health, marriage compatibility, and daily horoscope by trusted experts." />
-    <meta name="keywords" content="Vedic astrology, Indian astrology, Kundli, horoscope, numerology, palmistry, marriage compatibility, career astrology, health astrology, daily horoscope" />
-    <meta name="theme-color" content="#3C1A5B" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="AstroPath — Vedic Astrology Consultations" />
+  <meta property="og:description" content="Discover your destiny with ancient Indian wisdom. Book online consultations now." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1520975682031-a4de0b3b8d47?w=1200&q=80&auto=format&fit=crop" />
 
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="AstroPath — Vedic Astrology Consultations" />
-    <meta property="og:description" content="Book accurate, compassionate Vedic astrology readings. Career, love, health, and more." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://astropath.example.com" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" />
-    <meta name="twitter:card" content="summary_large_image" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- Google Fonts: Headings + Body -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Serif+Devanagari:wght@500;700&display=swap" rel="stylesheet" />
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              deepPurple: '#3C1A5B',
-              saffron: '#FF9933',
-              gold: '#FFD700',
-              ivory: '#F9F6F2',
-            },
-            fontFamily: {
-              heading: ['\"Playfair Display\"', '\"Noto Serif Devanagari\"', 'serif'],
-              body: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
-            },
-            boxShadow: {
-              'soft-gold': '0 10px 25px rgba(255, 215, 0, 0.18)',
-            },
-            backgroundImage: {
-              'cosmic-gradient': 'radial-gradient(circle at 20% 20%, rgba(60,26,91,0.85) 0%, rgba(18,2,31,0.95) 60%)',
-              'gold-sheen': 'linear-gradient(90deg, #FF9933 0%, #FFD700 100%)',
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepPurple: '#3C1A5B',
+            saffron: '#FF9933',
+            gold: '#FFD700',
+            ivory: '#F9F6F2',
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'ui-serif', 'Georgia', 'serif'],
+            body: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            devanagari: ['"Noto Serif Devanagari"', 'serif'],
+          },
+          backgroundImage: {
+            'cosmic-gradient':
+              'radial-gradient(circle at 20% 20%, rgba(255,215,0,0.07), transparent 40%), radial-gradient(circle at 80% 10%, rgba(255,153,51,0.07), transparent 45%), radial-gradient(circle at 50% 80%, rgba(60,26,91,0.35), rgba(60,26,91,0.8))',
+          },
+          boxShadow: {
+            'glow-gold': '0 10px 25px rgba(255, 215, 0, 0.25)',
+          },
+          keyframes: {
+            floaty: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
             },
           },
+          animation: {
+            floaty: 'floaty 8s ease-in-out infinite',
+          },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <!-- AOS Animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-z3gL3uKRN3e3c5Qh8Q1N9UH+9kQkHhKxqKQ1S5MxVgO1bB1qjWl1QF1+4iQp6S5zjQ3q5T8vQ8kN2zG3qS9YBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Star field layers */
+    .star-layer { pointer-events: none; }
+    .stars-1 {
+      background-image: radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.6), rgba(255,255,255,0) 40%),
+                        radial-gradient(1px 1px at 80px 120px, rgba(255,255,255,0.7), rgba(255,255,255,0) 40%),
+                        radial-gradient(1px 1px at 150px 90px, rgba(255,255,255,0.5), rgba(255,255,255,0) 40%),
+                        radial-gradient(1px 1px at 250px 160px, rgba(255,255,255,0.6), rgba(255,255,255,0) 40%);
+      background-size: 300px 300px;
+      background-repeat: repeat;
+      opacity: 0.4;
+    }
+    .stars-2 {
+      background-image: radial-gradient(1px 1px at 40px 60px, rgba(255,255,255,0.5), rgba(255,255,255,0) 40%),
+                        radial-gradient(1px 1px at 120px 40px, rgba(255,255,255,0.6), rgba(255,255,255,0) 40%),
+                        radial-gradient(1px 1px at 200px 180px, rgba(255,255,255,0.5), rgba(255,255,255,0) 40%),
+                        radial-gradient(1px 1px at 260px 100px, rgba(255,255,255,0.6), rgba(255,255,255,0) 40%);
+      background-size: 260px 260px;
+      background-repeat: repeat;
+      opacity: 0.25;
+    }
+    /* Faint mandala watermark */
+    .mandala-mask::after {
+      content: "";
+      position: absolute;
+      inset: -10%;
+      background:
+        conic-gradient(from 0deg, rgba(255,215,0,0.06), rgba(255,153,51,0.04), rgba(255,215,0,0.06));
+      mask:
+        radial-gradient(circle at center, black 35%, transparent 36%),
+        radial-gradient(circle at center, transparent 0 41%, black 42% 43%, transparent 44%),
+        radial-gradient(circle at center, transparent 0 49%, black 50% 51%, transparent 52%),
+        radial-gradient(circle at center, transparent 0 57%, black 58% 59%, transparent 60%);
+      -webkit-mask:
+        radial-gradient(circle at center, black 35%, transparent 36%),
+        radial-gradient(circle at center, transparent 0 41%, black 42% 43%, transparent 44%),
+        radial-gradient(circle at center, transparent 0 49%, black 50% 51%, transparent 52%),
+        radial-gradient(circle at center, transparent 0 57%, black 58% 59%, transparent 60%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-deepPurple bg-cosmic-gradient text-ivory font-body antialiased">
+  <!-- Star Parallax -->
+  <div aria-hidden="true" class="star-layer stars-1 fixed inset-0 -z-10" id="stars1"></div>
+  <div aria-hidden="true" class="star-layer stars-2 fixed inset-0 -z-10" id="stars2"></div>
 
-    <style>
-      html { scroll-behavior: smooth; }
-      body { background-color: #F9F6F2; }
-
-      /* Star layers for subtle cosmic background */
-      .stars-layer { position: absolute; inset: 0; pointer-events: none; }
-      #stars { opacity: 0.28; background-image:
-        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.9), rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 80px 120px, rgba(255,255,255,0.7), rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 150px 80px, rgba(255,255,255,0.8), rgba(255,255,255,0)),
-        radial-gradient(2px 2px at 40px 160px, rgba(255,255,255,0.5), rgba(255,255,255,0));
-        background-size: 200px 200px;
-      }
-      #stars2 { opacity: 0.22; background-image:
-        radial-gradient(1px 1px at 30px 50px, rgba(255,255,255,0.7), rgba(255,255,255,0)),
-        radial-gradient(2px 2px at 90px 170px, rgba(255,255,255,0.6), rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 170px 40px, rgba(255,255,255,0.8), rgba(255,255,255,0));
-        background-size: 250px 250px;
-      }
-      #stars3 { opacity: 0.18; background-image:
-        radial-gradient(1px 1px at 60px 140px, rgba(255,255,255,0.7), rgba(255,255,255,0)),
-        radial-gradient(2px 2px at 200px 90px, rgba(255,255,255,0.5), rgba(255,255,255,0));
-        background-size: 300px 300px;
-      }
-
-      /* Faint mandala watermark */
-      .mandala-watermark {
-        position: absolute; inset: auto -10rem -10rem auto; width: 24rem; height: 24rem; opacity: 0.08; filter: blur(0.2px);
-      }
-
-      /* Utilities for gold outline buttons */
-      .btn-gold-outline { border: 1.5px solid rgba(255, 215, 0, 0.7); color: #FFD700; }
-      .btn-gold-outline:hover { background: rgba(255, 215, 0, 0.08); }
-    </style>
-  </head>
-
-  <body class="font-body text-deepPurple/90 antialiased">
-    <!-- Global cosmic background -->
-    <div class="fixed inset-0 -z-10 bg-cosmic-gradient"></div>
-    <div id="stars" class="stars-layer -z-10"></div>
-    <div id="stars2" class="stars-layer -z-10"></div>
-    <div id="stars3" class="stars-layer -z-10"></div>
-
-    <!-- Header / Navbar -->
-    <header id="site-header" class="sticky top-0 z-50 transition-colors">
-      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <!-- Logo -->
-          <a href="#home" class="flex items-center gap-3">
-            <span aria-hidden="true" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold/10 ring-1 ring-gold/30">
-              <!-- Simple mandala icon -->
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gold">
-                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                  <path d="M12 2.75a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V3.5A.75.75 0 0 1 12 2.75Zm0 16.75a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V20.25a.75.75 0 0 1 .75-.75ZM2.75 12a.75.75 0 0 1 .75-.75H4.75a.75.75 0 0 1 0 1.5H3.5a.75.75 0 0 1-.75-.75Zm16.75 0a.75.75 0 0 1 .75-.75h1.25a.75.75 0 0 1 0 1.5H20.25a.75.75 0 0 1-.75-.75Z"/>
-                  <path d="M6.05 6.05a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 1 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm8.9 8.9a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 1 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm0-8.9a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 0 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm-8.9 8.9a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 0 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Z"/>
-                  <path d="M12 7.25a4.75 4.75 0 1 1 0 9.5a4.75 4.75 0 0 1 0-9.5Zm0 1.5a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5Z"/>
-                </g>
-              </svg>
-            </span>
-            <span class="font-heading text-xl font-semibold tracking-wide text-ivory">AstroPath</span>
-          </a>
-
-          <!-- Desktop Nav -->
-          <div class="hidden items-center gap-8 md:flex">
-            <a href="#home" class="text-ivory/90 hover:text-gold transition">Home</a>
-            <a href="#about" class="text-ivory/90 hover:text-gold transition">About</a>
-            <a href="#services" class="text-ivory/90 hover:text-gold transition">Consultations</a>
-            <a href="#horoscope" class="text-ivory/90 hover:text-gold transition">Horoscope</a>
-            <a href="#contact" class="text-ivory/90 hover:text-gold transition">Contact</a>
-          </div>
-
-          <!-- CTA + Mobile -->
-          <div class="flex items-center gap-3">
-            <a href="#booking" class="hidden md:inline-flex rounded-full bg-gold-sheen px-5 py-2.5 font-medium text-deepPurple shadow-soft-gold transition hover:brightness-110">Book Consultation</a>
-            <button id="mobile-btn" class="inline-flex items-center justify-center rounded-lg p-2 text-ivory/90 ring-1 ring-white/10 md:hidden" aria-label="Open menu">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="md:hidden hidden border-t border-white/10 py-3">
-          <div class="flex flex-col gap-3 py-3">
-            <a href="#home" class="text-ivory/90 hover:text-gold transition">Home</a>
-            <a href="#about" class="text-ivory/90 hover:text-gold transition">About</a>
-            <a href="#services" class="text-ivory/90 hover:text-gold transition">Consultations</a>
-            <a href="#horoscope" class="text-ivory/90 hover:text-gold transition">Horoscope</a>
-            <a href="#contact" class="text-ivory/90 hover:text-gold transition">Contact</a>
-            <a href="#booking" class="mt-2 inline-flex rounded-full bg-gold-sheen px-5 py-2.5 font-medium text-deepPurple shadow-soft-gold transition hover:brightness-110">Book Consultation</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero Section -->
-      <section id="home" class="relative overflow-hidden">
-        <div class="relative mx-auto grid min-h-[88vh] max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 lg:px-8">
-          <!-- Copy -->
-          <div data-aos="fade-up" class="relative z-10">
-            <h1 class="font-heading text-4xl leading-tight text-ivory sm:text-5xl md:text-6xl">
-              Discover Your Destiny with Ancient Indian Wisdom ✨
-            </h1>
-            <div class="mt-4 h-1 w-24 rounded-full bg-gold/70"></div>
-            <p class="mt-6 max-w-xl text-lg text-ivory/85">
-              Book personalized astrology consultations by trusted Vedic experts — clarity on career, relationships, health, and life purpose.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#booking" class="inline-flex items-center justify-center rounded-full bg-gold-sheen px-6 py-3 font-semibold text-deepPurple shadow-soft-gold transition hover:brightness-110">
-                <i class="fa-solid fa-calendar-check mr-2"></i>
-                Book Consultation
-              </a>
-              <a href="#services" class="btn-gold-outline inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition">
-                <i class="fa-solid fa-magic mr-2"></i>
-                Explore Services
-              </a>
-            </div>
-          </div>
-
-          <!-- Illustration / Mandala -->
-          <div data-aos="fade-up" data-aos-delay="100" class="relative">
-            <div class="relative mx-auto aspect-square w-full max-w-md rounded-[2rem] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm">
-              <div class="grid h-full place-items-center rounded-2xl bg-gradient-to-br from-deepPurple/50 to-transparent">
-                <svg viewBox="0 0 200 200" class="h-72 w-72 text-gold/80">
-                  <g fill="none" stroke="currentColor" stroke-width="0.8">
-                    <circle cx="100" cy="100" r="80" />
-                    <circle cx="100" cy="100" r="60" />
-                    <circle cx="100" cy="100" r="40" />
-                    <g transform="rotate(22 100 100)">
-                      <polygon points="100,30 115,85 170,85 125,115 140,170 100,135 60,170 75,115 30,85 85,85" />
-                    </g>
-                  </g>
-                </svg>
-                <p class="mt-3 text-center text-sm text-ivory/70">Guided by the stars, grounded in tradition</p>
-              </div>
-            </div>
-            <!-- Decorative watermark -->
-            <svg class="mandala-watermark" viewBox="0 0 200 200">
-              <g fill="none" stroke="#FFD700" stroke-width="0.4">
-                <circle cx="100" cy="100" r="90" />
-                <circle cx="100" cy="100" r="70" />
-                <circle cx="100" cy="100" r="50" />
-              </g>
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 transition-all duration-300" id="siteHeader">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <!-- Simple mandala icon -->
+          <span class="relative h-9 w-9 rounded-full bg-gradient-to-tr from-saffron to-gold shadow-glow-gold grid place-items-center">
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-deepPurple/90" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"/>
             </svg>
+          </span>
+          <div class="leading-tight">
+            <div class="font-heading text-xl font-semibold tracking-wide">AstroPath</div>
+            <div class="text-xs text-ivory/70">Vedic Astrology</div>
           </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="relative bg-ivory/80 py-20">
-        <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
-          <div data-aos="fade-right" class="relative overflow-hidden rounded-3xl shadow-lg ring-1 ring-deepPurple/10">
-            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=1600&auto=format&fit=crop" alt="Traditional Indian astrology setup" class="h-full w-full object-cover" />
-          </div>
-          <div data-aos="fade-left">
-            <h2 class="font-heading text-3xl text-deepPurple sm:text-4xl">Ancient Vedic Wisdom for Modern Life</h2>
-            <div class="mt-4 flex items-center gap-3">
-              <span class="h-[2px] w-16 bg-gold"></span>
-              <i class="fa-solid fa-om text-gold"></i>
-              <span class="h-[2px] w-16 bg-gold"></span>
-            </div>
-            <p class="mt-6 text-deepPurple/80">
-              With years of experience in <strong>Vedic Astrology</strong>, <strong>Numerology</strong>, and <strong>Palmistry</strong>, we offer compassionate guidance to help you navigate life’s milestones — career, relationships, health, and spiritual growth.
-            </p>
-            <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <li class="flex items-start gap-3"><i class="fa-solid fa-star text-gold mt-1"></i><span>Personalized birth chart (Kundli) analysis</span></li>
-              <li class="flex items-start gap-3"><i class="fa-solid fa-heart text-gold mt-1"></i><span>Relationship & compatibility insights</span></li>
-              <li class="flex items-start gap-3"><i class="fa-solid fa-briefcase text-gold mt-1"></i><span>Career & finance decision support</span></li>
-              <li class="flex items-start gap-3"><i class="fa-solid fa-spa text-gold mt-1"></i><span>Health & well-being guidance</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Consultation Services -->
-      <section id="services" class="relative py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
-            <h2 class="font-heading text-3xl text-ivory sm:text-4xl">Consultation Services</h2>
-            <p class="mt-3 text-ivory/80">Choose the focus area that resonates with your current journey.</p>
-          </div>
-
-          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Card -->
-            <article class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl" data-aos="fade-up">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                <i class="fa-solid fa-briefcase"></i>
-              </div>
-              <h3 class="mt-4 text-xl font-semibold text-ivory">Career & Finance Guidance</h3>
-              <p class="mt-2 text-ivory/80">Make confident choices in career transitions, investments, and growth cycles.</p>
-              <a href="#booking" class="mt-4 inline-flex items-center gap-2 text-gold hover:underline">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-
-            <article class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl" data-aos="fade-up" data-aos-delay="50">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                <i class="fa-solid fa-heart"></i>
-              </div>
-              <h3 class="mt-4 text-xl font-semibold text-ivory">Love & Relationship</h3>
-              <p class="mt-2 text-ivory/80">Gain clarity on compatibility, timing, and deepening your connections.</p>
-              <a href="#booking" class="mt-4 inline-flex items-center gap-2 text-gold hover:underline">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-
-            <article class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                <i class="fa-solid fa-spa"></i>
-              </div>
-              <h3 class="mt-4 text-xl font-semibold text-ivory">Health & Well-being</h3>
-              <p class="mt-2 text-ivory/80">Understand planetary influences on vitality and lifestyle choices.</p>
-              <a href="#booking" class="mt-4 inline-flex items-center gap-2 text-gold hover:underline">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-
-            <article class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl" data-aos="fade-up">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                <i class="fa-solid fa-ring"></i>
-              </div>
-              <h3 class="mt-4 text-xl font-semibold text-ivory">Marriage Compatibility</h3>
-              <p class="mt-2 text-ivory/80">Kundli matching, remedies, and auspicious timings for harmony.</p>
-              <a href="#booking" class="mt-4 inline-flex items-center gap-2 text-gold hover:underline">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-
-            <article id="horoscope" class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl" data-aos="fade-up" data-aos-delay="50">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                <i class="fa-solid fa-sun"></i>
-              </div>
-              <h3 class="mt-4 text-xl font-semibold text-ivory">Daily Horoscope</h3>
-              <p class="mt-2 text-ivory/80">Fresh planetary insights to align your day with cosmic rhythms.</p>
-              <a href="#booking" class="mt-4 inline-flex items-center gap-2 text-gold hover:underline">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-
-            <article class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold">
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <h3 class="mt-4 text-xl font-semibold text-ivory">Kundli & Birth Chart</h3>
-              <p class="mt-2 text-ivory/80">In-depth natal chart interpretation and planetary period analysis.</p>
-              <a href="#booking" class="mt-4 inline-flex items-center gap-2 text-gold hover:underline">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Booking Section -->
-      <section id="booking" class="bg-ivory/90 py-20">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
-            <h2 class="font-heading text-3xl text-deepPurple sm:text-4xl">Schedule Your Consultation 🕉️</h2>
-            <p class="mt-3 text-deepPurple/80">Select your preferred date & time below.</p>
-          </div>
-
-          <div class="mt-8 overflow-hidden rounded-2xl shadow ring-1 ring-deepPurple/10" data-aos="zoom-in">
-            <div class="w-full flex justify-center bg-white">
-              <!-- Replace your-username with your Calendly URL username -->
-              <iframe src="https://calendly.com/your-username" width="100%" height="600" frameborder="0"></iframe>
-            </div>
-          </div>
-
-          <p class="mt-4 text-center text-sm text-deepPurple/70" data-aos="fade-up" data-aos-delay="100">
-            Thank you! Your booking is confirmed. You will receive an email and WhatsApp reminder.
-          </p>
-        </div>
-      </section>
-
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="relative bg-white/5 py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
-            <h2 class="font-heading text-3xl text-ivory sm:text-4xl">What Clients Say</h2>
-            <p class="mt-3 text-ivory/80">Real stories of clarity and transformation.</p>
-          </div>
-
-          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <figure class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm" data-aos="fade-right">
-              <div class="flex items-center gap-3">
-                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=facearea&facepad=2" alt="Client portrait" />
-                <figcaption>
-                  <div class="font-medium text-ivory">Ananya S.</div>
-                  <div class="text-xs text-ivory/70">Mumbai</div>
-                </figcaption>
-              </div>
-              <div class="mt-3 text-gold">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <blockquote class="mt-3 text-ivory/90">The career reading was spot on and helped me time my job switch perfectly.</blockquote>
-            </figure>
-
-            <figure class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm" data-aos="fade-up">
-              <div class="flex items-center gap-3">
-                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=facearea&facepad=2" alt="Client portrait" />
-                <figcaption>
-                  <div class="font-medium text-ivory">Rahul K.</div>
-                  <div class="text-xs text-ivory/70">Bengaluru</div>
-                </figcaption>
-              </div>
-              <div class="mt-3 text-gold">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-              <blockquote class="mt-3 text-ivory/90">Accurate guidance with simple remedies. Felt supported and understood.</blockquote>
-            </figure>
-
-            <figure class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm" data-aos="fade-left">
-              <div class="flex items-center gap-3">
-                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=facearea&facepad=2" alt="Client portrait" />
-                <figcaption>
-                  <div class="font-medium text-ivory">Meera T.</div>
-                  <div class="text-xs text-ivory/70">Delhi</div>
-                </figcaption>
-              </div>
-              <div class="mt-3 text-gold">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <blockquote class="mt-3 text-ivory/90">The relationship reading brought so much clarity. Highly recommend!</blockquote>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="relative bg-ivory/90 py-20">
-        <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
-          <div data-aos="fade-right">
-            <h2 class="font-heading text-3xl text-deepPurple sm:text-4xl">Get In Touch ✉️</h2>
-            <p class="mt-3 text-deepPurple/80">Have questions or special requests? Send a message and we’ll respond shortly.</p>
-
-            <!-- Social links -->
-            <div class="mt-6 flex items-center gap-4">
-              <a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-deepPurple text-ivory ring-1 ring-deepPurple/30 transition hover:bg-deepPurple/80" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-deepPurple text-ivory ring-1 ring-deepPurple/30 transition hover:bg-deepPurple/80" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-              <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-deepPurple text-ivory ring-1 ring-deepPurple/30 transition hover:bg-deepPurple/80" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-          </div>
-
-          <div data-aos="fade-left">
-            <!-- Formspree form: replace your_form_id -->
-            <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-4">
-              <input type="text" name="name" placeholder="Your Name" required class="w-full rounded-lg border border-deepPurple/20 bg-white/70 p-3 outline-none ring-1 ring-transparent transition placeholder:text-deepPurple/40 focus:ring-gold" />
-              <input type="email" name="email" placeholder="Your Email" required class="w-full rounded-lg border border-deepPurple/20 bg-white/70 p-3 outline-none ring-1 ring-transparent transition placeholder:text-deepPurple/40 focus:ring-gold" />
-              <textarea name="message" rows="4" placeholder="Your Message" required class="w-full rounded-lg border border-deepPurple/20 bg-white/70 p-3 outline-none ring-1 ring-transparent transition placeholder:text-deepPurple/40 focus:ring-gold"></textarea>
-              <button type="submit" class="inline-flex items-center rounded-full bg-gold-sheen px-6 py-3 font-semibold text-deepPurple shadow-soft-gold transition hover:brightness-110">
-                <i class="fa-solid fa-paper-plane mr-2"></i>
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/your-number" class="fixed bottom-6 right-6 inline-flex items-center justify-center rounded-full bg-green-500 p-4 text-white shadow-lg transition hover:scale-105" aria-label="Chat on WhatsApp">
-          <i class="fab fa-whatsapp text-2xl"></i>
         </a>
-      </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="relative overflow-hidden bg-deepPurple py-10 text-gold">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <div class="flex items-center gap-3">
-            <span aria-hidden="true" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold/10 ring-1 ring-gold/30">
-              <i class="fa-solid fa-star text-gold"></i>
-            </span>
-            <span class="font-heading text-xl">AstroPath</span>
-          </div>
-          <nav class="flex items-center gap-5 text-sm">
-            <a href="#home" class="hover:underline">Home</a>
-            <a href="#about" class="hover:underline">About</a>
-            <a href="#services" class="hover:underline">Consultations</a>
-            <a href="#horoscope" class="hover:underline">Horoscope</a>
-            <a href="#contact" class="hover:underline">Contact</a>
-          </nav>
-          <div class="text-sm">© 2025 AstroPath. For spiritual guidance purposes only.</div>
+        <!-- Nav Links (Desktop) -->
+        <nav class="hidden md:flex items-center gap-8 text-ivory/90">
+          <a href="#home" class="hover:text-gold transition">Home</a>
+          <a href="#about" class="hover:text-gold transition">About</a>
+          <a href="#services" class="hover:text-gold transition">Consultations</a>
+          <a href="#horoscope" class="hover:text-gold transition">Horoscope</a>
+          <a href="#contact" class="hover:text-gold transition">Contact</a>
+        </nav>
+
+        <!-- CTA + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#booking" class="hidden sm:inline-block bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 px-4 rounded-full shadow-glow-gold hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-gold/70">Book Consultation</a>
+          <button id="mobileToggle" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-ivory/10 hover:bg-ivory/15 focus:outline-none focus:ring-2 focus:ring-gold/70" aria-label="Open Menu" aria-expanded="false">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
         </div>
       </div>
-      <!-- Faint mandala pattern -->
-      <svg class="pointer-events-none absolute left-1/2 top-1/2 -z-0 -translate-x-1/2 -translate-y-1/2 opacity-10" width="420" height="420" viewBox="0 0 200 200">
-        <g fill="none" stroke="#FFD700" stroke-width="0.5">
-          <circle cx="100" cy="100" r="90" />
-          <circle cx="100" cy="100" r="70" />
-          <circle cx="100" cy="100" r="50" />
-          <g transform="rotate(11 100 100)">
-            <polygon points="100,30 115,85 170,85 125,115 140,170 100,135 60,170 75,115 30,85 85,85" />
-          </g>
-        </g>
-      </svg>
-    </footer>
+    </div>
 
-    <!-- Scripts: AOS, interactions, parallax -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({ duration: 800, once: true, easing: 'ease-out-quart' });
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-deepPurple/90 backdrop-blur">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 space-y-3">
+        <a href="#home" class="block py-2 hover:text-gold">Home</a>
+        <a href="#about" class="block py-2 hover:text-gold">About</a>
+        <a href="#services" class="block py-2 hover:text-gold">Consultations</a>
+        <a href="#horoscope" class="block py-2 hover:text-gold">Horoscope</a>
+        <a href="#contact" class="block py-2 hover:text-gold">Contact</a>
+        <a href="#booking" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 rounded-full shadow-glow-gold">Book Consultation</a>
+      </div>
+    </div>
+  </header>
 
-      // Mobile menu toggle
-      const mobileBtn = document.getElementById('mobile-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
-        mobileMenu.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
+  <!-- Hero Section -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center min-h-[70vh] py-12">
+        <div class="space-y-6" data-aos="fade-right">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight">
+            Discover Your Destiny with Ancient Indian Wisdom ✨
+          </h1>
+          <p class="text-ivory/85 text-lg">
+            Book personalized astrology consultations by trusted Vedic experts. Gain clarity on career, love, health, and life’s most important choices.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#booking" class="bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-3 px-6 rounded-full shadow-glow-gold hover:opacity-95">Book Consultation</a>
+            <a href="#services" class="border border-gold/70 text-gold hover:bg-gold hover:text-deepPurple font-semibold py-3 px-6 rounded-full transition">Explore Services</a>
+          </div>
+          <div class="flex items-center gap-6 pt-4 text-ivory/70">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-star text-gold"></i><span>Accurate Guidance</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-seedling text-gold"></i><span>Holistic Approach</span></div>
+          </div>
+        </div>
+        <div class="relative h-[340px] sm:h-[420px] lg:h-[520px] mandala-mask" data-aos="fade-left">
+          <div class="absolute inset-0 rounded-3xl bg-ivory/5 border border-white/10 backdrop-blur-lg"></div>
+          <div class="relative h-full grid place-items-center">
+            <!-- Decorative cosmic orb -->
+            <div class="h-56 w-56 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full bg-gradient-to-br from-gold/60 via-saffron/50 to-transparent blur-0 shadow-glow-gold animate-floaty"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-up" class="order-2 md:order-1 space-y-6">
+          <h2 class="font-heading text-3xl sm:text-4xl">Guided by the Vedas, Aligned with You</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+          <p class="text-ivory/85">
+            With years of experience in Vedic Astrology, Numerology, and Palmistry, we provide insights rooted in ancient wisdom and tailored to modern life. Whether it’s career growth, relationship harmony, or spiritual clarity, our consultations are practical, compassionate, and precise.
+          </p>
+          <div class="grid grid-cols-2 gap-6 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-moon text-gold"></i></span>
+              <div>
+                <div class="font-semibold">Vedic Astrology</div>
+                <p class="text-sm text-ivory/70">Comprehensive birth chart analysis and remedies.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-hand text-gold"></i></span>
+              <div>
+                <div class="font-semibold">Palmistry</div>
+                <p class="text-sm text-ivory/70">Decode life patterns through palm lines.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-infinity text-gold"></i></span>
+              <div>
+                <div class="font-semibold">Numerology</div>
+                <p class="text-sm text-ivory/70">Name and number vibrations for success.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-om text-gold"></i></span>
+              <div>
+                <div class="font-semibold">Spiritual Remedies</div>
+                <p class="text-sm text-ivory/70">Balance planetary energies and remove blocks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="order-1 md:order-2">
+          <div class="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10">
+            <img src="https://images.unsplash.com/photo-1589310243389-96fb9c846f0f?q=80&w=1200&auto=format&fit=crop" alt="Astrology consultation" class="h-full w-full object-cover opacity-80" />
+            <div class="absolute inset-0 bg-gradient-to-t from-deepPurple/70 to-deepPurple/0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="relative py-16 sm:py-20 bg-ivory/5">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <h2 class="font-heading text-3xl sm:text-4xl">Consultation Services</h2>
+        <div class="mx-auto mt-3 h-1 w-28 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+        <p class="mt-4 text-ivory/80">Choose from our range of focused sessions.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service Card -->
+        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up">
+          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+            <i class="fa-solid fa-briefcase text-gold"></i>
+          </div>
+          <h3 class="mt-4 font-semibold text-xl">Career & Finance Guidance</h3>
+          <p class="mt-2 text-ivory/70">Strategize your next career move and financial decisions using your birth chart.</p>
+          <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
+        </div>
+
+        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+            <i class="fa-solid fa-heart text-gold"></i>
+          </div>
+          <h3 class="mt-4 font-semibold text-xl">Love & Relationship</h3>
+          <p class="mt-2 text-ivory/70">Understand compatibility and navigate relationship dynamics with clarity.</p>
+          <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
+        </div>
+
+        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+            <i class="fa-solid fa-notes-medical text-gold"></i>
+          </div>
+          <h3 class="mt-4 font-semibold text-xl">Health & Well-being</h3>
+          <p class="mt-2 text-ivory/70">Explore preventive measures and holistic remedies for better health.</p>
+          <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
+        </div>
+
+        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up">
+          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+            <i class="fa-solid fa-ring text-gold"></i>
+          </div>
+          <h3 class="mt-4 font-semibold text-xl">Marriage Compatibility</h3>
+          <p class="mt-2 text-ivory/70">Detailed Kundli matching and remedies for long-term harmony.</p>
+          <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
+        </div>
+
+        <div id="horoscope" class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+            <i class="fa-solid fa-sun text-gold"></i>
+          </div>
+          <h3 class="mt-4 font-semibold text-xl">Daily Horoscope</h3>
+          <p class="mt-2 text-ivory/70">Get daily insights and auspicious timings based on your zodiac.</p>
+          <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
+        </div>
+
+        <div class="group rounded-2xl border border-white/10 bg-deepPurple/30 p-6 hover:shadow-glow-gold hover:border-gold/40 transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-12 w-12 rounded-xl bg-ivory/10 grid place-items-center border border-white/10">
+            <i class="fa-solid fa-hand-hamsa text-gold"></i>
+          </div>
+          <h3 class="mt-4 font-semibold text-xl">Remedial Sessions</h3>
+          <p class="mt-2 text-ivory/70">Personalized rituals, mantras, and gemstone guidance.</p>
+          <a href="#booking" class="mt-4 inline-block rounded-full border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-deepPurple">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="relative py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-aos="fade-up">
+        <h2 class="font-heading text-3xl sm:text-4xl">Schedule Your Consultation 🕉️</h2>
+        <div class="mx-auto mt-3 h-1 w-28 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+        <p class="mt-4 text-ivory/80">Select your preferred date & time. A confirmation will be sent to your email.</p>
+      </div>
+      <div class="w-full flex justify-center py-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-full max-w-5xl">
+          <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-ivory/5">
+            <iframe src="https://calendly.com/your-username" class="h-full w-full" frameborder="0" title="Calendly Booking"></iframe>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-gold/90" data-aos="fade-up" data-aos-delay="200">Thank you! Your booking is confirmed.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="relative py-16 sm:py-20 bg-ivory/5">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <h2 class="font-heading text-3xl sm:text-4xl">What Clients Say</h2>
+        <div class="mx-auto mt-3 h-1 w-28 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Testimonial Card -->
+        <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6" data-aos="fade-up">
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="h-12 w-12 rounded-full object-cover" alt="Client" />
+            <div>
+              <div class="font-semibold">Aaradhya K.</div>
+              <div class="text-sm text-ivory/70">Mumbai</div>
+            </div>
+          </div>
+          <div class="mt-3 text-gold"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+          <p class="mt-3 text-ivory/85">Accurate and compassionate guidance. Helped me make a confident career switch!</p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" class="h-12 w-12 rounded-full object-cover" alt="Client" />
+            <div>
+              <div class="font-semibold">Rahul S.</div>
+              <div class="text-sm text-ivory/70">Bengaluru</div>
+            </div>
+          </div>
+          <div class="mt-3 text-gold"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i></div>
+          <p class="mt-3 text-ivory/85">The remedies were simple yet effective. I feel aligned and focused.</p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="h-12 w-12 rounded-full object-cover" alt="Client" />
+            <div>
+              <div class="font-semibold">Meera T.</div>
+              <div class="text-sm text-ivory/70">Delhi</div>
+            </div>
+          </div>
+          <div class="mt-3 text-gold"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+          <p class="mt-3 text-ivory/85">Beautiful experience. The session brought clarity and peace of mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <h2 class="font-heading text-3xl sm:text-4xl">Get In Touch ✉️</h2>
+        <div class="mx-auto mt-3 h-1 w-28 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div data-aos="fade-up" class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6">
+          <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-4">
+            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-ivory/10 border border-white/10 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
+            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-ivory/10 border border-white/10 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
+            <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-ivory/10 border border-white/10 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60"></textarea>
+            <button type="submit" class="bg-gradient-to-r from-saffron to-gold text-deepPurple py-3 px-6 rounded-full font-semibold shadow-glow-gold hover:opacity-95">Send Message</button>
+          </form>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-deepPurple/30 p-6">
+            <h3 class="font-semibold text-xl">Connect</h3>
+            <p class="mt-2 text-ivory/80">Follow for insights, mantras, and daily tips.</p>
+            <div class="mt-4 flex items-center gap-4">
+              <a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="h-10 w-10 grid place-items-center rounded-full bg-ivory/10 border border-white/10 hover:border-gold/60 hover:text-gold transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener" class="h-10 w-10 grid place-items-center rounded-full bg-ivory/10 border border-white/10 hover:border-gold/60 hover:text-gold transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="h-10 w-10 grid place-items-center rounded-full bg-ivory/10 border border-white/10 hover:border-gold/60 hover:text-gold transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="mt-6 text-ivory/70">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-gold"></i><span>Online • India Standard Time (IST)</span></div>
+              <div class="flex items-center gap-2 mt-2"><i class="fa-solid fa-envelope text-gold"></i><a href="mailto:hello@astropath.example" class="hover:text-gold">hello@astropath.example</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-105 transition" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="relative bg-deepPurple/80 border-t border-white/10 mt-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="relative h-8 w-8 rounded-full bg-gradient-to-tr from-saffron to-gold grid place-items-center">
+              <svg viewBox="0 0 24 24" class="h-4 w-4 text-deepPurple/90" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"/>
+              </svg>
+            </span>
+            <span class="font-heading text-lg font-semibold">AstroPath</span>
+          </div>
+          <p class="mt-3 text-ivory/75 max-w-md">For spiritual guidance purposes only. Trust your free will and inner wisdom.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-ivory/80">
+            <li><a class="hover:text-gold" href="#about">About</a></li>
+            <li><a class="hover:text-gold" href="#services">Consultations</a></li>
+            <li><a class="hover:text-gold" href="#booking">Book</a></li>
+            <li><a class="hover:text-gold" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Disclaimer</h4>
+          <p class="text-ivory/75">Astrology provides insights; outcomes are not guaranteed. For medical, legal, or financial decisions, consult a qualified professional.</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-white/10 pt-6 text-sm text-ivory/70">© 2025 AstroPath. For spiritual guidance purposes only.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // AOS init
+    AOS.init({
+      duration: 700,
+      once: true,
+      easing: 'ease-out-cubic',
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle?.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    mobileMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileToggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Header shadow on scroll
+    const siteHeader = document.getElementById('siteHeader');
+    const onScrollHeader = () => {
+      if (window.scrollY > 4) {
+        siteHeader.classList.add('backdrop-blur', 'bg-deepPurple/70', 'shadow');
+      } else {
+        siteHeader.classList.remove('backdrop-blur', 'bg-deepPurple/70', 'shadow');
       }
+    };
+    window.addEventListener('scroll', onScrollHeader, { passive: true });
+    onScrollHeader();
 
-      // Sticky header background on scroll
-      const header = document.getElementById('site-header');
-      const setHeaderBg = () => {
-        if (window.scrollY > 10) {
-          header.classList.add('bg-deepPurple/80', 'backdrop-blur');
-        } else {
-          header.classList.remove('bg-deepPurple/80', 'backdrop-blur');
-        }
-      };
-      setHeaderBg();
-      window.addEventListener('scroll', setHeaderBg, { passive: true });
-
-      // Parallax stars
-      const s1 = document.getElementById('stars');
-      const s2 = document.getElementById('stars2');
-      const s3 = document.getElementById('stars3');
-      const onScroll = () => {
-        const y = window.scrollY || 0;
-        s1.style.transform = `translateY(${y * 0.06}px)`;
-        s2.style.transform = `translateY(${y * 0.1}px)`;
-        s3.style.transform = `translateY(${y * 0.14}px)`;
-      };
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-    </script>
-  </body>
+    // Parallax stars
+    const stars1 = document.getElementById('stars1');
+    const stars2 = document.getElementById('stars2');
+    const onScrollParallax = () => {
+      const y = window.scrollY || window.pageYOffset;
+      if (stars1) stars1.style.transform = `translateY(${y * -0.08}px)`;
+      if (stars2) stars2.style.transform = `translateY(${y * -0.16}px)`;
+    };
+    window.addEventListener('scroll', onScrollParallax, { passive: true });
+    onScrollParallax();
+  </script>
+</body>
 </html>
