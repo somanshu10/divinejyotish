@@ -62,7 +62,15 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-2Sx6EYoUl1iEVjShjv2lFQ1VmH0yk4EwofHjrHj6Yotn06PMjObYwXwD70zKp5kVjAJeNHOYp6QZQ0wPUs/AA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-RXf+QSDCUQs6Q0hL0Rz3k0K7B3Ko5Ep8KKKbnO1FjZ3l0fXYn6kE6U+h8XG+7XjFi7wvJ8Xjs+n4x7x1M+eXfw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+
 
 
   <style>
@@ -145,16 +153,16 @@
 
         <!-- Nav Links (Desktop) -->
         <nav class="hidden md:flex items-center gap-8 text-slate-700">
-          <a href="#home" class="hover:text-gold transition">Home</a>
-          <a href="#about" class="hover:text-gold transition">About</a>
-          <a href="#services" class="hover:text-gold transition">Consultations</a>
-          <a href="#horoscope" class="hover:text-gold transition">Horoscope</a>
-          <a href="#contact" class="hover:text-gold transition">Contact</a>
+          <a href="#home"  class="relative px-3 py-2 text-ivory/90 hover:text-gold transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Home</a>
+          <a href="#about"  class="relative px-3 py-2 text-ivory/90 hover:text-gold transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">About</a>
+          <a href="#services"  class="relative px-3 py-2 text-ivory/90 hover:text-gold transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Consultations</a>
+          <a href="#horoscope"  class="relative px-3 py-2 text-ivory/90 hover:text-gold transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Horoscope</a>
+          <a href="#contact"  class="relative px-3 py-2 text-ivory/90 hover:text-gold transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Contact</a>
         </nav>
 
         <!-- CTA + Mobile Toggle -->
         <div class="flex items-center gap-3">
-          <a href="#booking" class="hidden sm:inline-block bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 px-4 rounded-full shadow-glow-gold hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-gold/70">Book Consultation</a>
+          <a href="#booking" class="bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold px-5 py-2 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-glow-gold">Book Consultation</a>
           <button id="mobileToggle" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-ivory/10 hover:bg-ivory/15 focus:outline-none focus:ring-2 focus:ring-gold/70" aria-label="Open Menu" aria-expanded="false">
             <i class="fa-solid fa-bars text-xl"></i>
           </button>
@@ -170,7 +178,8 @@
         <a href="#services" class="block py-2 hover:text-gold">Consultations</a>
         <a href="#horoscope" class="block py-2 hover:text-gold">Horoscope</a>
         <a href="#contact" class="block py-2 hover:text-gold">Contact</a>
-        <a href="#booking" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 rounded-full shadow-glow-gold">Book Consultation</a>
+        <a href="#booking" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 rounded-full shadow-glow-gold hover{
+  transform: scale(1.2);}">Book Consultation</a>
       </div>
     </div>
   </header>
@@ -187,7 +196,7 @@
             Book personalized astrology consultations by trusted Vedic experts. Gain clarity on career, love, health, and life’s most important choices.
           </p>
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="#booking" class="bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-3 px-6 rounded-full shadow-glow-gold hover:opacity-95">Book Consultation</a>
+            <a href="#booking" class="bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-3 px-6 rounded-full shadow-glow-gold hover:opacity-95 hover:text-deepPurple">Book Consultation</a>
             <a href="#services" class="border border-gold/70 text-gold hover:bg-gold hover:text-deepPurple font-semibold py-3 px-6 rounded-full transition">Explore Services</a>
           </div>
           <div class="flex items-center gap-6 pt-4 text-ivory/70">
@@ -198,73 +207,83 @@
         <div class="relative h-[340px] sm:h-[420px] lg:h-[520px] mandala-mask" data-aos="fade-left">
           <div class="absolute inset-0 rounded-3xl bg-ivory/5 border border-white/10 backdrop-blur-lg"></div>
           <div class="relative h-full grid place-items-center">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Cosmic astrology background" />
+            <img src="images/77.png"
+     alt="Astrology cosmic background"
+     class="h-full w-full object-cover rounded-3xl shadow-lg" />images/77.png" alt="Cosmic astrology background" />
 
-            <!-- Decorative cosmic orb -->
+            <!-- Decorative cosmic orb
             <div class="h-56 w-56 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full bg-gradient-to-br from-gold/60 via-saffron/50 to-transparent blur-0 shadow-glow-gold animate-floaty"></div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="relative py-16 sm:py-20">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div data-aos="fade-up" class="order-2 md:order-1 space-y-6">
-          <h2 class="font-heading text-3xl sm:text-4xl">Guided by the Vedas, Aligned with You</h2>
-          <div class="h-1 w-24 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
-          <p class="text-ivory/85">
-           We are a collective of experienced Vedic astrologers dedicated to helping individuals navigate life's challenges through the ancient wisdom of Indian astrology.
-<p>With decades of combined experience in Kundali analysis, numerology, palmistry, and Vedic astrology, our experts provide personalized  for all aspects of life.</p>
+ <section id="about" class="relative py-20 bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <img src="https://images.unsplash.com/photo-1508614983361-1f6f8fc8d7e4?q=80&w=1600&auto=format&fit=crop"
+           alt="Astrology chart and consultation"
+           class="w-full h-full object-cover rounded-3xl shadow-xl" />
+    </div>
 
-<p>Whether you seek clarity in love, career, health, or spiritual growth, our consultations blend traditional wisdom with modern understanding to illuminate your path forward.</p>
+    <div data-aos="fade-left" class="space-y-6">
+      <h2 class="font-heading text-4xl sm:text-5xl">Guided by the Vedas, Aligned with You</h2>
+      <div class="h-1 w-24 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+      <p class="text-ivory/85 text-lg leading-relaxed">
+        Our collective of experienced Vedic astrologers helps you navigate life's questions with time-tested Indian wisdom. 
+        We specialize in Kundali, numerology, palmistry, and spiritual remedies for clarity and peace.
+      </p>
 
-          </p>
-
-          <div class="grid grid-cols-2 gap-6 pt-2">
-  
-            <div class="flex items-start gap-3">
-              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-moon text-gold"></i></span>
-              <div>
-                <div class="font-semibold">Vedic Astrology</div>
-                <p class="text-sm text-ivory/70">Comprehensive birth chart analysis and remedies.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-hand text-gold"></i></span>
-              <div>
-                <div class="font-semibold">Palmistry</div>
-                <p class="text-sm text-ivory/70">Decode life patterns through palm lines.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-infinity text-gold"></i></span>
-              <div>
-                <div class="font-semibold">Numerology</div>
-                <p class="text-sm text-ivory/70">Name and number vibrations for success.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-1 h-9 w-9 rounded-xl bg-ivory/10 grid place-items-center border border-white/10"><i class="fa-solid fa-om text-gold"></i></span>
-              <div>
-                <div class="font-semibold">Spiritual Remedies</div>
-                <p class="text-sm text-ivory/70">Balance planetary energies and remove blocks.</p>
-              </div>
-            </div>
-          </div>
+      <div class="grid sm:grid-cols-2 gap-6 pt-4">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+          <i class="fa-solid fa-moon text-gold text-2xl mb-3"></i>
+          <h3 class="font-semibold text-lg text-center">Vedic Astrology</h3>
+          <p class="text-sm text-ivory/70 text-center">Birth chart reading and planetary analysis for life direction.</p>
         </div>
-        <div data-aos="fade-up" class="order-1 md:order-2">
-          <div class="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10">
-            <img src="https://images.unsplash.com/photo-1589310243389-96fb9c846f0f?q=80&w=1200&auto=format&fit=crop" alt="Astrology consultation" class="h-full w-full object-cover opacity-80" />
-            <div class="absolute inset-0 bg-gradient-to-t from-deepPurple/70 to-deepPurple/0"></div>
-          </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+          <i class="fa-solid fa-hand text-gold text-2xl mb-3"></i>
+          <h3 class="font-semibold text-lg text-center">Palmistry</h3>
+          <p class="text-sm text-ivory/70 text-center">Uncover personality and destiny through your palm lines.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+          <i class="fa-solid fa-infinity text-gold text-2xl mb-3"></i>
+          <h3 class="font-semibold text-lg text-center">Numerology</h3>
+          <p class="text-sm text-ivory/70 text-center">Discover lucky numbers and name vibrations for success.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+          <i class="fa-solid fa-om text-gold text-2xl mb-3"></i>
+          <h3 class="font-semibold text-lg text-center">Spiritual Remedies</h3>
+          <p class="text-sm text-ivory/70 text-center">Customized gemstone and mantra solutions to balance energies.</p>
         </div>
       </div>
     </div>
-    
-  </section>
+  </div>
+</section>
+
+
+<!-- Achievements Section -->
+<section id="achievements" class="py-16 sm:py-20 bg-gradient-to-r from-saffron/10 to-gold/10">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div>
+        <div class="text-5xl font-heading text-deepPurple font-bold">5000+</div>
+        <p class="mt-2 text-lg text-ivory/80">Happy Clients Guided</p>
+      </div>
+      <div>
+        <div class="text-5xl font-heading text-deepPurple font-bold">15+</div>
+        <p class="mt-2 text-lg text-ivory/80">Years of Experience</p>
+      </div>
+      <div>
+        <div class="text-5xl font-heading text-deepPurple font-bold">98%</div>
+        <p class="mt-2 text-lg text-ivory/80">Client Satisfaction Rate</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Services Section -->
 <section id="services" class="relative py-16 sm:py-20 bg-slate-50">
@@ -449,44 +468,55 @@
     
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="relative py-16 sm:py-20">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10" data-aos="fade-up">
-        <h2 class="font-heading text-3xl sm:text-4xl">Get In Touch ✉️</h2>
-        <div class="mx-auto mt-3 h-1 w-28 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+ <!-- Contact Section -->
+<section id="contact" class="relative py-16 sm:py-20 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10" data-aos="fade-up">
+      <h2 class="font-heading text-3xl sm:text-4xl">Get In Touch ✉️</h2>
+      <div class="mx-auto mt-3 h-1 w-28 bg-gradient-to-r from-saffron to-gold rounded-full"></div>
+      <p class="mt-4 text-ivory/80 max-w-2xl mx-auto">
+        Have questions or want to book a session? Reach out anytime — we’d love to guide you on your journey.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <!-- Contact Form -->
+      <div data-aos="fade-up" class="rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
+        <h3 class="font-semibold text-xl mb-4">Send a Message</h3>
+        <form id="contactForm" action="https://formspree.io/f/xwprwrlg" method="POST" class="space-y-4">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
+          <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
+          <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60"></textarea>
+          <button type="submit" class="bg-gradient-to-r from-saffron to-gold text-deepPurple py-3 px-6 rounded-full font-semibold shadow-glow-gold hover:scale-105 transition-transform">Send Message</button>
+          <div id="formStatus" class="hidden text-sm"></div>
+        </form>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-10 items-start">
-        <div data-aos="fade-up" class="rounded-2xl border border-slate-200 bg-white p-6">
-          <form id="contactForm" action="https://formspree.io/f/xwprwrlg" method="POST" class="space-y-4">
-            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
-            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60" />
-            <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-slate-50 border border-slate-200 placeholder:italic focus:outline-none focus:ring-2 focus:ring-gold/60"></textarea>
-            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
-            <button type="submit" class="bg-gradient-to-r from-saffron to-gold text-deepPurple py-3 px-6 rounded-full font-semibold shadow-glow-gold hover:opacity-95 transition-transform active:scale-95">Send Message</button>
-            <div id="formStatus" class="hidden text-sm"></div>
-          </form>
+      <!-- Connect Info -->
+      <div data-aos="fade-up" data-aos-delay="100" class="rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
+        <h3 class="font-semibold text-xl mb-4">Connect With Us</h3>
+        <p class="text-ivory/80 mb-6">Stay connected for daily insights, mantras, and spiritual updates.</p>
+
+        <div class="flex items-center gap-4 mb-8">
+          <a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+          <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-youtube text-xl"></i></a>
+          <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp text-xl"></i></a>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="space-y-4">
-          <div class="rounded-2xl border border-slate-200 bg-white p-6">
-            <h3 class="font-semibold text-xl">Connect</h3>
-            <p class="mt-2 text-ivory/80">Follow for insights, mantras, and daily tips.</p>
-            <div class="mt-4 flex items-center gap-4">
-              <a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="h-10 w-10 grid place-items-center rounded-full bg-ivory/10 border border-white/10 hover:border-gold/60 hover:text-gold transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener" class="h-10 w-10 grid place-items-center rounded-full bg-ivory/10 border border-white/10 hover:border-gold/60 hover:text-gold transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-              <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="h-10 w-10 grid place-items-center rounded-full bg-ivory/10 border border-white/10 hover:border-gold/60 hover:text-gold transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-            <div class="mt-6 text-ivory/70">
-              <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-gold"></i><span>Online • India Standard Time (IST)</span></div>
-              <div class="flex items-center gap-2 mt-2"><i class="fa-solid fa-envelope text-gold"></i><a href="mailto:hello@astropath.example" class="hover:text-gold">hello@astropath.example</a></div>
-            </div>
-          </div>
+        <div class="space-y-3 text-ivory/75">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gold text-lg"></i><span></span></div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-gold text-lg"></i><a href="mailto:hello@astropath.example" class="hover:text-gold">hello@astropath.example</a></div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold text-lg"></i><a href="tel:+91XXXXXXXXXX" class="hover:text-gold">+91 XXXXX XXXXX</a></div>
+        </div>
+
+        <div class="mt-6">
+          <img src="https://images.unsplash.com/photo-1604890691007-8e4d0b16a9b4?q=80&w=1200&auto=format&fit=crop" alt="Astrology connect image" class="rounded-xl object-cover h-48 w-full opacity-90">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-105 transition" aria-label="Chat on WhatsApp">
