@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AstroPath — Vedic Astrology Consultations</title>
+  <title>DivineJyotish — Vedic Astrology Consultations</title>
   <meta name="description" content="Book personalized Vedic astrology consultations. Career, relationships, health, and life guidance by trusted experts." />
   <meta name="keywords" content="Astrology, Vedic Astrology, Horoscope, Kundli, Numerology, Palmistry, Indian Astrology Consultation" />
   <link rel="canonical" href="https://example.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="AstroPath — Vedic Astrology Consultations" />
+  <meta property="og:title" content="DivineJyotish — Vedic Astrology Consultations" />
   <meta property="og:description" content="Discover your destiny with ancient Indian wisdom. Book online consultations now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://example.com/" />
@@ -19,6 +19,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet" />
+
+
+  
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,14 +64,12 @@
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   
-  <!-- Font Awesome Icons -->
-  <link
+  <!-- Font Awesome (working version) -->
+<link
   rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  integrity="sha512-RXf+QSDCUQs6Q0hL0Rz3k0K7B3Ko5Ep8KKKbnO1FjZ3l0fXYn6kE6U+h8XG+7XjFi7wvJ8Xjs+n4x7x1M+eXfw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 />
+
 
 
 
@@ -128,6 +129,28 @@
     .bg-ivory\/5 { background-color: rgba(248,250,252,1) !important; }
     /* Ensure any residual dark cards render white */
     .bg-deepPurple\/30 { background-color: #ffffff !important; }
+
+
+  nav a {
+    position: relative;
+    transition: color 0.3s;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: #FFD700;
+    transition: width 0.3s;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+
+
+
   </style>
 </head>
 <body class="min-h-screen bg-white text-slate-800 font-body antialiased">
@@ -146,7 +169,7 @@
             </svg>
           </span>
           <div class="leading-tight">
-            <div class="font-heading text-xl font-semibold tracking-wide">AstroPath</div>
+            <div class="font-heading text-xl font-semibold tracking-wide">DivineJyotish</div>
             <div class="text-xs text-slate-500">Vedic Astrology</div>
           </div>
         </a>
@@ -178,14 +201,14 @@
         <a href="#services" class="block py-2 hover:text-gold">Consultations</a>
         <a href="#horoscope" class="block py-2 hover:text-gold">Horoscope</a>
         <a href="#contact" class="block py-2 hover:text-gold">Contact</a>
-        <a href="#booking" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 rounded-full shadow-glow-gold hover{
+        <a href="#booking" class="transition-transform duration-300 hover:scale-110 hover:shadow-lg inline-flex items-center justify-center w-full bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-2.5 rounded-full shadow-glow-gold hover{
   transform: scale(1.2);}">Book Consultation</a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="relative overflow-hidden">
+  <section id="home" class="relative w-full overflow-hidden">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 items-center min-h-[70vh] py-12">
         <div class="space-y-6" data-aos="fade-right">
@@ -196,20 +219,22 @@
             Book personalized astrology consultations by trusted Vedic experts. Gain clarity on career, love, health, and life’s most important choices.
           </p>
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="#booking" class="bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-3 px-6 rounded-full shadow-glow-gold hover:opacity-95 hover:text-deepPurple">Book Consultation</a>
-            <a href="#services" class="border border-gold/70 text-gold hover:bg-gold hover:text-deepPurple font-semibold py-3 px-6 rounded-full transition">Explore Services</a>
+            <a href="#booking" class="transition-transform duration-300 hover:scale-110 hover:shadow-lg bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold py-3 px-6 rounded-full shadow-glow-gold hover:opacity-95 hover:text-deepPurple">Book Consultation</a>
+            <a href="#services" class="transition-transform duration-300 hover:scale-110 hover:shadow-lg border border-gold/70 text-gold hover:bg-gold hover:text-deepPurple font-semibold py-3 px-6 rounded-full transition">Explore Services</a>
           </div>
           <div class="flex items-center gap-6 pt-4 text-ivory/70">
             <div class="flex items-center gap-2"><i class="fa-solid fa-star text-gold"></i><span>Accurate Guidance</span></div>
             <div class="flex items-center gap-2"><i class="fa-solid fa-seedling text-gold"></i><span>Holistic Approach</span></div>
           </div>
         </div>
-        <div class="relative h-[340px] sm:h-[420px] lg:h-[520px] mandala-mask" data-aos="fade-left">
-          <div class="absolute inset-0 rounded-3xl bg-ivory/5 border border-white/10 backdrop-blur-lg"></div>
-          <div class="relative h-full grid place-items-center">
-            <img src="images/77.png"
-     alt="Astrology cosmic background"
-     class="h-full w-full object-cover rounded-3xl shadow-lg" />images/77.png" alt="Cosmic astrology background" />
+        <div class="relative overflow-hidden rounded-3xl">
+  <img
+    src="images/46992.jpg"
+    alt="Astrology cosmic sky"
+    class="w-full h-auto object-cover object-center max-h-[90vh] sm:rounded-3xl"
+    loading="lazy"
+  />
+</div>
 
             <!-- Decorative cosmic orb
             <div class="h-56 w-56 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full bg-gradient-to-br from-gold/60 via-saffron/50 to-transparent blur-0 shadow-glow-gold animate-floaty"></div>
@@ -221,11 +246,14 @@
 
  <section id="about" class="relative py-20 bg-white">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-    <div data-aos="fade-right">
-      <img src="https://images.unsplash.com/photo-1508614983361-1f6f8fc8d7e4?q=80&w=1600&auto=format&fit=crop"
-           alt="Astrology chart and consultation"
-           class="w-full h-full object-cover rounded-3xl shadow-xl" />
-    </div>
+    <div class="relative overflow-hidden rounded-3xl">
+  <img
+    src="images/g1.jpg"
+    alt="Astrology chart"
+    class="w-full h-auto object-cover object-center max-h-[80vh] sm:rounded-3xl"
+    loading="lazy"
+  />
+</div>
 
     <div data-aos="fade-left" class="space-y-6">
       <h2 class="font-heading text-4xl sm:text-5xl">Guided by the Vedas, Aligned with You</h2>
@@ -236,25 +264,25 @@
       </p>
 
       <div class="grid sm:grid-cols-2 gap-6 pt-4">
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
-          <i class="fa-solid fa-moon text-gold text-2xl mb-3"></i>
+        <div class="text-center rounded-2xl border border-slate-200 bg-white hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+          <i class="fa-solid fa-moon text-gold text-2xl mb-3 tex"></i>
           <h3 class="font-semibold text-lg text-center">Vedic Astrology</h3>
           <p class="text-sm text-ivory/70 text-center">Birth chart reading and planetary analysis for life direction.</p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+        <div class="text-center rounded-2xl border border-slate-200 bg-white hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
           <i class="fa-solid fa-hand text-gold text-2xl mb-3"></i>
           <h3 class="font-semibold text-lg text-center">Palmistry</h3>
           <p class="text-sm text-ivory/70 text-center">Uncover personality and destiny through your palm lines.</p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+        <div class="text-center rounded-2xl border border-slate-200 bg-white hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
           <i class="fa-solid fa-infinity text-gold text-2xl mb-3"></i>
           <h3 class="font-semibold text-lg text-center">Numerology</h3>
           <p class="text-sm text-ivory/70 text-center">Discover lucky numbers and name vibrations for success.</p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
+        <div class="text-center rounded-2xl border border-slate-200 bg-white hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 transition-all duration-300">
           <i class="fa-solid fa-om text-gold text-2xl mb-3"></i>
           <h3 class="font-semibold text-lg text-center">Spiritual Remedies</h3>
           <p class="text-sm text-ivory/70 text-center">Customized gemstone and mantra solutions to balance energies.</p>
@@ -284,7 +312,14 @@
     </div>
   </div>
 </section>
-
+<div class="relative overflow-hidden rounded-3xl">
+  <img
+    src="images/a.jpg"
+    alt="Astrology cosmic sky"
+    class="w-full h-auto object-cover object-center max-h-[90vh] sm:rounded-3xl"
+    loading="lazy"
+  />
+</div>
   <!-- Services Section -->
 <section id="services" class="relative py-16 sm:py-20 bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -348,7 +383,7 @@
       <!-- Remedial Sessions -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up" data-aos-delay="200">
         <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
-          <i class="fa-solid fa-hand-hamsa"></i>
+          <i class="fa-solid fa-hand"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Remedial Sessions</h3>
         <p class="mt-2 text-ivory/70">Personalized rituals, gemstone guidance, and mantra solutions.</p>
@@ -506,12 +541,15 @@
         <div class="space-y-3 text-ivory/75">
           <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gold text-lg"></i><span></span></div>
           <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-gold text-lg"></i><a href="mailto:hello@astropath.example" class="hover:text-gold">hello@astropath.example</a></div>
-          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold text-lg"></i><a href="tel:+91XXXXXXXXXX" class="hover:text-gold">+91 XXXXX XXXXX</a></div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold text-lg"></i><a href="tel:+91XXXXXXXXXX" class="hover:text-gold">+91 9582528062</a></div>
         </div>
 
-        <div class="mt-6">
-          <img src="https://images.unsplash.com/photo-1604890691007-8e4d0b16a9b4?q=80&w=1200&auto=format&fit=crop" alt="Astrology connect image" class="rounded-xl object-cover h-48 w-full opacity-90">
-        </div>
+  <img
+    src="images/p.jpg"
+    class="w-full h-auto object-cover object-center max-h-[90vh] sm:rounded-3xl"
+    loading="lazy"
+  />
+</div>
       </div>
     </div>
   </div>
@@ -519,7 +557,7 @@
 
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-105 transition" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/9582528062" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-105 transition" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 
@@ -535,7 +573,7 @@
                 <path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"/>
               </svg>
             </span>
-            <span class="font-heading text-lg font-semibold">AstroPath</span>
+            <span class="font-heading text-lg font-semibold">DivineJyotish</span>
           </div>
           <p class="mt-3 text-ivory/75 max-w-md">For spiritual guidance purposes only. Trust your free will and inner wisdom.</p>
         </div>
@@ -553,7 +591,7 @@
           <p class="text-ivory/75">Astrology provides insights; outcomes are not guaranteed. For medical, legal, or financial decisions, consult a qualified professional.</p>
         </div>
       </div>
-      <div class="mt-8 border-t border-slate-200 pt-6 text-sm text-ivory/70">© 2025 AstroPath. For spiritual guidance purposes only.</div>
+      <div class="mt-8 border-t border-slate-200 pt-6 text-sm text-ivory/70">© 2025 DivineJyotish. For spiritual guidance purposes only.</div>
     </div>
   </footer>
 
