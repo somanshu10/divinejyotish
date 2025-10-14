@@ -13,7 +13,7 @@
   <meta property="og:description" content="Discover your destiny with ancient Indian wisdom. Book online consultations now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1520975682031-a4de0b3b8d47?w=1200&q=80&auto=format&fit=crop" />
+  <meta property="og:image" content="images/logo.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -162,12 +162,13 @@
         <!-- Logo -->
         <a href="#home" class="flex items-center gap-3 group">
           <!-- Simple mandala icon -->
-          <span class="relative h-9 w-9 rounded-full bg-gradient-to-tr from-saffron to-gold shadow-glow-gold grid place-items-center">
+          <!-- <span class="relative h-9 w-9 rounded-full bg-gradient-to-tr from-saffron to-gold shadow-glow-gold grid place-items-center">
             <svg viewBox="0 0 24 24" class="h-5 w-5 text-deepPurple/90" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="12" cy="12" r="9"/>
               <path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"/>
-            </svg>
+            </svg> -->
           </span>
+          <img src="images/logo.png" alt="DivineJyotish Logo" class="h-16 w-auto group-hover:block" />
           <div class="leading-tight">
             <div class="font-heading text-xl font-semibold tracking-wide">DivineJyotish</div>
             <div class="text-xs text-slate-500">Vedic Astrology</div>
@@ -185,7 +186,10 @@
 
         <!-- CTA + Mobile Toggle -->
         <div class="flex items-center gap-3">
-          <a href="#booking" class="bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold px-5 py-2 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-glow-gold">Book Consultation</a>
+          <a href="#booking" class="hidden sm:inline-block bg-gradient-to-r from-saffron to-gold text-deepPurple font-semibold px-5 py-2 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-glow-gold">
+  Book Consultation
+</a>
+
           <button id="mobileToggle" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-ivory/10 hover:bg-ivory/15 focus:outline-none focus:ring-2 focus:ring-gold/70" aria-label="Open Menu" aria-expanded="false">
             <i class="fa-solid fa-bars text-xl"></i>
           </button>
@@ -332,7 +336,7 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Career & Finance -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up">
-        <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl transition-transform duration-300 group-hover:scale-110">
+        <div class="h-14 w-14 mx-auto rounded-xl  from-saffron to-gold grid place-items-center text-deepPurple text-2xl transition-transform duration-300 group-hover:scale-110">
           <i class="fa-solid fa-briefcase"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Career & Finance</h3>
@@ -342,7 +346,7 @@
 
       <!-- Love & Relationship -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up" data-aos-delay="100">
-        <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
+        <div class="h-14 w-14 mx-auto rounded-xl  from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
           <i class="fa-solid fa-heart"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Love & Relationship</h3>
@@ -352,7 +356,7 @@
 
       <!-- Health & Well-being -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up" data-aos-delay="200">
-        <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
+        <div class="h-14 w-14 mx-auto rounded-xl  from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
           <i class="fa-solid fa-notes-medical"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Health & Well-being</h3>
@@ -362,7 +366,7 @@
 
       <!-- Marriage Compatibility -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up">
-        <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
+        <div class="h-14 w-14 mx-auto rounded-xl  from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
           <i class="fa-solid fa-ring"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Marriage Compatibility</h3>
@@ -372,7 +376,7 @@
 
       <!-- Daily Horoscope -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up" data-aos-delay="100">
-        <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
+        <div class="h-14 w-14 mx-auto rounded-xl  from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
           <i class="fa-solid fa-sun"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Daily Horoscope</h3>
@@ -382,7 +386,7 @@
 
       <!-- Remedial Sessions -->
       <div class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:bg-gradient-to-br hover:from-saffron/10 hover:to-gold/10 hover:-translate-y-1 hover:shadow-glow-gold" data-aos="fade-up" data-aos-delay="200">
-        <div class="h-14 w-14 mx-auto rounded-xl bg-gradient-to-tr from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
+        <div class="h-14 w-14 mx-auto rounded-xl  from-saffron to-gold grid place-items-center text-deepPurple text-2xl group-hover:scale-110 transition-transform duration-300">
           <i class="fa-solid fa-hand"></i>
         </div>
         <h3 class="mt-4 font-semibold text-xl">Remedial Sessions</h3>
@@ -534,13 +538,13 @@
 
         <div class="flex items-center gap-4 mb-8">
           <a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-instagram text-xl"></i></a>
-          <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-youtube text-xl"></i></a>
-          <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+          
+          <a href="https://wa.me/9582528062" target="_blank" rel="noopener" class="h-12 w-12 grid place-items-center rounded-full bg-gradient-to-tr from-saffron to-gold text-white hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp text-xl"></i></a>
         </div>
 
         <div class="space-y-3 text-ivory/75">
-          <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gold text-lg"></i><span></span></div>
-          <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-gold text-lg"></i><a href="mailto:hello@astropath.example" class="hover:text-gold">hello@astropath.example</a></div>
+          <!-- <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gold text-lg"></i><span></span></div> -->
+          <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-gold text-lg"></i><a href="mailto:hello@astropath.example" class="hover:text-gold">somanshu10@gmail.com</a></div>
           <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold text-lg"></i><a href="tel:+91XXXXXXXXXX" class="hover:text-gold">+91 9582528062</a></div>
         </div>
 
@@ -567,12 +571,13 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div>
           <div class="flex items-center gap-3">
-            <span class="relative h-8 w-8 rounded-full bg-gradient-to-tr from-saffron to-gold grid place-items-center">
+            <!-- <span class="relative h-8 w-8 rounded-full bg-gradient-to-tr from-saffron to-gold grid place-items-center">
               <svg viewBox="0 0 24 24" class="h-4 w-4 text-deepPurple/90" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="9"/>
                 <path d="M12 3v18M3 12h18M5.5 5.5l13 13M18.5 5.5l-13 13"/>
               </svg>
-            </span>
+            </span> -->
+            <IMG src="images/logo.png" alt="DivineJyotish Logo" class="h-12 w-auto"/>
             <span class="font-heading text-lg font-semibold">DivineJyotish</span>
           </div>
           <p class="mt-3 text-ivory/75 max-w-md">For spiritual guidance purposes only. Trust your free will and inner wisdom.</p>
