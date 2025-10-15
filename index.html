@@ -898,5 +898,176 @@
 <!-- SwiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+
+<!-- Paste this near the end of your index.html, before </body> -->
+<script type="module">
+  // ----- CONFIG: replace with your real config from Firebase console -----
+  const firebaseConfig = {
+  apiKey: "AIzaSyCDnaGB79u91yR2TLFWgNyxc-C_PvCGuEU",
+  authDomain: "divinejyotish-65769.firebaseapp.com",
+  projectId: "divinejyotish-65769",
+  storageBucket: "divinejyotish-65769.firebasestorage.app",
+  messagingSenderId: "818128751625",
+  appId: "1:818128751625:web:13bc47bf5c2a621a1c7cd8",
+  measurementId: "G-1FMJGLJ3N4"
+};
+
+  // --------------------------------------------------------------------
+
+  // Import Firebase v11+ modular SDK from Google's CDN
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+  // Optional Firestore (for activity storage)
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    where,
+    orderBy,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+  // init
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore ? getFirestore(app) : null;
+
+  // DOM refs (update IDs if yours are different)
+  const loginForm = document.getElementById('loginForm');
+  const loginButton = document.getElementById('loginButton');   // maybe your CTA button
+  const logoutButton = document.getElementById('logoutButton');
+  const registerBtn = document.getElementById('registerBtn');
+  const authStatus = document.getElementById('authStatus');
+  const userInfo = document.getElementById('userInfo');
+  const activityList = document.getElementById('activityList');
+  const refreshActivity = document.getElementById('refreshActivity');
+
+  // Utility: show message
+  function showStatus(msg) {
+    if (authStatus) authStatus.textContent = msg;
+    console.log(msg);
+  }
+
+  // ---------- Register (Sign up) ----------
+  registerBtn?.addEventListener('click', async (e) => {
+    e.preventDefault();
+    // assuming your form fields are inside loginForm with names identifier and password
+    const email = loginForm?.identifier?.value?.trim();
+    const password = loginForm?.password?.value;
+    if (!email || !password) return showStatus('Enter email and password to register.');
+
+    try {
+      const userCred = await createUserWithEmailAndPassword(auth, email, password);
+      showStatus('✅ Registered & logged in as ' + userCred.user.email);
+      // optionally record sign-up activity
+      if (db) await addActivity(userCred.user.uid, 'signup');
+    } catch (err) {
+      showStatus('❌ Register error: ' + err.message);
+    }
+  });
+
+  // ---------- Login ----------
+  loginForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = loginForm?.identifier?.value?.trim();
+    const password = loginForm?.password?.value;
+    if (!email || !password) return showStatus('Enter email and password to log in.');
+
+    try {
+      const userCred = await signInWithEmailAndPassword(auth, email, password);
+      showStatus('✅ Logged in as ' + userCred.user.email);
+      if (db) await addActivity(userCred.user.uid, 'login');
+    } catch (err) {
+      showStatus('❌ Login error: ' + err.message);
+    }
+  });
+
+  // ---------- Logout ----------
+  logoutButton?.addEventListener('click', async () => {
+    try {
+      await signOut(auth);
+      showStatus('Logged out.');
+    } catch (err) {
+      showStatus('❌ Logout error: ' + err.message);
+    }
+  });
+
+  // ---------- Auth state listener: update UI ----------
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      // show user & toggle buttons
+      if (userInfo) userInfo.textContent = `Signed in: ${user.email} (uid: ${user.uid})`;
+      loginButton?.classList?.add('hidden');
+      logoutButton?.classList?.remove('hidden');
+      registerBtn?.classList?.add('hidden');
+
+      // load activities if using firestore
+      if (db && activityList) {
+        await loadActivity(user.uid);
+      }
+    } else {
+      if (userInfo) userInfo.textContent = 'Not signed in';
+      loginButton?.classList?.remove('hidden');
+      logoutButton?.classList?.add('hidden');
+      registerBtn?.classList?.remove('hidden');
+
+      if (activityList) activityList.innerHTML = '';
+    }
+  });
+
+  // ---------- Firestore helpers (optional) ----------
+  async function addActivity(uid, action) {
+    if (!db) return;
+    try {
+      const docRef = await addDoc(collection(db, 'activities'), {
+        uid,
+        action,
+        createdAt: serverTimestamp()
+      });
+      console.log('Activity added id:', docRef.id);
+    } catch (err) {
+      console.error('Add activity error', err);
+    }
+  }
+
+  async function loadActivity(uid) {
+    if (!db) return;
+    try {
+      // Query last 20 activities for this user
+      const q = query(collection(db, 'activities'), where('uid', '==', uid), orderBy('createdAt', 'desc'));
+      const snapshot = await getDocs(q);
+      if (!activityList) return;
+      activityList.innerHTML = '';
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const li = document.createElement('li');
+        const ts = data.createdAt ? new Date(data.createdAt.seconds * 1000).toLocaleString() : '—';
+        li.textContent = `${ts} — ${data.action}`;
+        activityList.appendChild(li);
+      });
+    } catch (err) {
+      console.error('Load activity error', err);
+    }
+  }
+
+  // manual refresh activity button
+  refreshActivity?.addEventListener('click', async () => {
+    const user = auth.currentUser;
+    if (user) await loadActivity(user.uid);
+  });
+
+  // That's it!
+</script>
+
 </body>
 </html>
